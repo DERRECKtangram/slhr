@@ -3,7 +3,7 @@
   var form = document.getElementById('lead-form');
   if (!form) return;
   var LINE_URL = 'https://line.me/ti/p/4NoEgf4THl';
-  var MAIL_TO = 'shangli.hr@gmail.com';
+  var MAIL_TO = 'service@slhrtw.com';
   var err = document.getElementById('lead-error');
   var result = document.getElementById('lead-result');
   var msgBox = document.getElementById('lead-msg');
