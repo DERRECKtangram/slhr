@@ -2,7 +2,7 @@
 
 ## 一、上傳前必做（5 分鐘）
 
-1. **換網域**：所有檔案搜尋 `www.your-domain.com.tw`，全部取代成你的正式網域。要改的檔案有 index.html、privacy.html、sitemap.xml、robots.txt、.htaccess、nginx-security.conf、.well-known/security.txt。
+1. **網域**：已設定為 `https://slhrtw.com`（Cloudflare Workers 自訂網域，www.slhrtw.com 一併綁定）。
 2. **放法規文件**：把以下三份 PDF 放進 `docs/`：
    - `fee-schedule.pdf`：收費項目及金額明細表
    - `license.pdf`：私立就業服務機構許可證
@@ -11,15 +11,9 @@
 4. **接上試算表單**：表單目前送到 `/api/lead`，請換成你的後端或表單服務。換成外部網址（例如 Formspree）時，要把 CSP 裡的 `form-action 'self'` 一起加上該網域，不然表單會被擋住送不出去。
 5. **客戶心得**：這個區塊已先註解起來。取得客戶同意的真實心得後，再取消註解放上去。
 
-## 二、主機設定（擇一）
+## 二、主機設定
 
-| 主機類型 | 使用檔案 |
-|---|---|
-| Apache／一般虛擬主機 | `.htaccess`（放在網站根目錄） |
-| Nginx／VPS | `nginx-security.conf` 的內容貼進 server 區塊 |
-| Netlify／Cloudflare Pages | `_headers` |
-
-另外要申請 SSL 憑證（Let's Encrypt 免費），讓網站全站使用 HTTPS。
+網站部署在 Cloudflare Workers（專案 `slhr`），已連結本 GitHub repository，推送到 `main` 就會自動部署。資安標頭由 `_headers` 設定，HTTPS 憑證由 Cloudflare 自動配發。
 
 ## 三、資安檢測（目標 A 以上）
 

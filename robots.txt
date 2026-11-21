@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://www.your-domain.com.tw/sitemap.xml
+Sitemap: https://slhrtw.com/sitemap.xml
